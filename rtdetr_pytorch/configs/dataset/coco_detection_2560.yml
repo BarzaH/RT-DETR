@@ -7,13 +7,13 @@ train_dataloader:
   type: DataLoader
   dataset: 
     type: CocoDetection
-    img_folder: /mnt/nvstorage/gis/seedling/data/tiled_coco/640/images/train/
-    ann_file: /mnt/nvstorage/gis/seedling/data/tiled_coco/640/images/train/train_coco.json
+    img_folder: /mnt/nvstorage/gis/seedling/data/tiled_coco/2560/images/train/
+    ann_file: /mnt/nvstorage/gis/seedling/data/tiled_coco/2560/anno/train.json
     transforms:
       type: Compose
       ops: ~
   shuffle: True
-  batch_size: 48
+  batch_size: 8
   num_workers: 8
   drop_last: True 
 
@@ -22,13 +22,13 @@ val_dataloader:
   type: DataLoader
   dataset: 
     type: CocoDetection
-    img_folder: /mnt/nvstorage/gis/seedling/data/tiled_coco/640/images/val/
-    ann_file: /mnt/nvstorage/gis/seedling/data/tiled_coco/640/images/val/val_coco.json
+    img_folder: /mnt/nvstorage/gis/seedling/data/tiled_coco/2560/images/val/
+    ann_file: /mnt/nvstorage/gis/seedling/data/tiled_coco/2560/anno/val.json
     transforms:
       type: Compose
       ops: ~ 
 
   shuffle: False
-  batch_size: 48
+  batch_size: 8
   num_workers: 8
   drop_last: False

@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 import argparse
 import numpy as np 
 
-from src.core import YAMLConfig
+from rtdetr.core import YAMLConfig
 
 import torch
 import torch.nn as nn 
@@ -84,7 +84,7 @@ def main(args, ):
     # import onnxruntime as ort 
     # from PIL import Image, ImageDraw, ImageFont
     # from torchvision.transforms import ToTensor
-    # from src.data.coco.coco_dataset import mscoco_category2name, mscoco_category2label, mscoco_label2category
+    # from rtdetr.data.coco.coco_dataset import mscoco_category2name, mscoco_category2label, mscoco_label2category
 
     # # print(onnx.helper.printable_graph(mm.graph))
 

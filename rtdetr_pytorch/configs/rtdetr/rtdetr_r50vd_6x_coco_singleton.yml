@@ -1,0 +1,9 @@
+__include__: [
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/dataset/coco_detection.yml',
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/runtime.yml',
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/rtdetr/include/dataloader.yml',
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/rtdetr/include/optimizer.yml',
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/rtdetr/include/rtdetr_r50vd.yml',
+]
+
+output_dir: ./output/rtdetr_r50vd_6x_coco

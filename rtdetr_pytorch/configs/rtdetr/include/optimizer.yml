@@ -8,8 +8,9 @@ ema:
 
 find_unused_parameters: True 
 
-epoches: 72
+epoches: 500
 clip_max_norm: 0.1
+checkpoint_step: 0.1 # such float won't save any epochs by this rule.
 
 optimizer:
   type: AdamW

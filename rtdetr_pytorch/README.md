@@ -73,8 +73,8 @@ python tools/train.py -c configs/rtdetr/rtdetr_r50vd_6x_coco.yml
 
 ```shell
 # train on multi-gpu
-export CUDA_VISIBLE_DEVICES=0,1,2,3
-torchrun --nproc_per_node=4 tools/train.py -c configs/rtdetr/rtdetr_r50vd_6x_coco.yml
+export CUDA_VISIBLE_DEVICES=2,3
+torchrun --nproc_per_node=2 tools/train.py -c configs/rtdetr/rtdetr_r50vd_6x_coco_2560.yml
 ```
 
 - Evaluation on Multiple GPUs:

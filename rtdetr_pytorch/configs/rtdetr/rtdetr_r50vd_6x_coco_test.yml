@@ -1,0 +1,13 @@
+__include__: [
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/dataset/coco_detection.yml',
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/runtime.yml',
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/rtdetr/include/dataloader.yml',
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/rtdetr/include/optimizer.yml',
+  '/home/sema/RT-DETR/rtdetr_pytorch/configs/rtdetr/include/rtdetr_r50vd.yml',
+]
+
+output_dir: ./output/rtdetr_r50vd_6x_coco_test
+val_dataloader:
+  dataset: 
+    img_folder: /mnt/nvstorage/gis/seedling/data/tiled_coco/640/images/test/
+    ann_file: /mnt/nvstorage/gis/seedling/data/tiled_coco/640/images/test/test_coco.json

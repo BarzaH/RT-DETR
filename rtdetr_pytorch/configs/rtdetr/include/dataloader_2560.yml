@@ -11,9 +11,9 @@ train_dataloader:
         - {type: RandomIoUCrop, p: 0.8}
         - {type: SanitizeBoundingBox, min_size: 1}
         - {type: RandomHorizontalFlip}
-        - {type: Resize, size: [640, 640], }
-        # - {type: Resize, size: 639, max_size: 640}
-        # - {type: PadToSize, spatial_size: 640}
+        - {type: Resize, size: [2560, 2560], }
+        # - {type: Resize, size: 639, max_size: 2560}
+        # - {type: PadToSize, spatial_size: 2560}
         - {type: ToImageTensor}
         - {type: ConvertDtype}
         - {type: SanitizeBoundingBox, min_size: 1}
@@ -26,9 +26,9 @@ val_dataloader:
   dataset: 
     transforms:
       ops: 
-        # - {type: Resize, size: 639, max_size: 640}
-        # - {type: PadToSize, spatial_size: 640}
-        - {type: Resize, size: [640, 640]}
+        # - {type: Resize, size: 639, max_size: 2560}
+        # - {type: PadToSize, spatial_size: 2560}
+        - {type: Resize, size: [2560, 2560]}
         - {type: ToImageTensor}
         - {type: ConvertDtype}
   shuffle: False
