@@ -2,21 +2,23 @@
 """
 
 
-import torch 
-import torch.nn as nn 
-
+import torch
+import torch.nn as nn
 import torchvision
+
 torchvision.disable_beta_transforms_warning()
-from torchvision import datapoints
+
+if int(torchvision.__version__.split(".")[1]) < 16:
+    from torchvision import datapoints
+else:
+    from torchvision import tv_tensors as datapoints
+
+from typing import Any, Dict, List, Optional
 
 import torchvision.transforms.v2 as T
 import torchvision.transforms.v2.functional as F
-
-from PIL import Image 
-from typing import Any, Dict, List, Optional
-
-from rtdetr.core import register, GLOBAL_CONFIG
-
+from PIL import Image
+from rtdetr.core import GLOBAL_CONFIG, register
 
 __all__ = ['Compose', ]
 
