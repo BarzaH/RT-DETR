@@ -1,6 +1,6 @@
 [project]
 name = "rtdetr"
-version = "1.1"
+version = "1.1.1"
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
